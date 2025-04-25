@@ -12,7 +12,7 @@
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#documents">Documents</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -26,18 +26,18 @@
     </section>
 
     <section id="documents">
-        <h2>Documents</h2>
-        <label for="docSelector">Select document type:</label>
-        <select id="docSelector">
-          <option value="" disabled selected>Select...</option>
-          <option value="resume">Resume</option>
-          <option value="certificates">Certificates</option>
-          <option value="awards">Awards</option>
-        </select>
-      
-        <div id="docDisplay" class="doc-display"></div>
-      </section>
-      
+      <h2>Documents</h2>
+      <label for="docSelector">Select document type:</label>
+      <select id="docSelector">
+        <option value="" disabled selected>Select...</option>
+        <option value="resume">Resume</option>
+        <option value="certificates">Certificates</option>
+        <option value="awards">Awards</option>
+      </select>
+
+      <div id="docDisplay" class="doc-display"></div>
+    </section>
+
     <section id="projects">
       <h2>Projects</h2>
       <div class="project-list" id="projectContainer"></div>
@@ -49,7 +49,6 @@
         <li><a href="mailto:your.email@example.com">Email</a></li>
         <li><a href="https://github.com/dita-deb" target="_blank">GitHub</a></li>
         <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
-        <!-- Add more if applicable -->
       </ul>
     </section>
   </main>
@@ -58,6 +57,6 @@
     <p>© 2025 Anindita Deb</p>
   </footer>
 
-  <script type="module" src="script.ts"></script>
+  <script src="script.js"></script> <!-- Updated to use compiled JS -->
 </body>
 </html>

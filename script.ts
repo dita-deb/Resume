@@ -2,10 +2,10 @@ const docSelector = document.getElementById("docSelector") as HTMLSelectElement;
 const docDisplay = document.getElementById("docDisplay") as HTMLDivElement;
 
 const docs = {
-  resume: "assets/Anindita_Deb_Resume.pdf",
-  certificates: "assets/Certificates.pdf",
-  awards: "assets/Awards.pdf"
-};
+    resume: "assets/Anindita_Deb_Resume.pdf",
+    certificates: "assets/Certificates.pdf",
+    awards: "assets/Awards.pdf"
+  };  
 
 docSelector.addEventListener("change", () => {
   const selected = docSelector.value as keyof typeof docs;
@@ -68,4 +68,5 @@ interface Project {
       projectContainer.appendChild(card);
     });
   }
+
   
