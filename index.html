@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anindita Deb | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Anindita Deb</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Graduated in Computer Engineering from Kennesaw State University, December 2024. I'm passionate about embedded systems, AI, and safety-critical applications.</p>
+    </section>
+
+    <section id="documents">
+        <h2>Documents</h2>
+        <label for="docSelector">Select document type:</label>
+        <select id="docSelector">
+          <option value="" disabled selected>Select...</option>
+          <option value="resume">Resume</option>
+          <option value="certificates">Certificates</option>
+          <option value="awards">Awards</option>
+        </select>
+      
+        <div id="docDisplay" class="doc-display"></div>
+      </section>
+      
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-list" id="projectContainer"></div>
+    </section>
+
+    <section id="contact">
+      <h2>Let's Connect</h2>
+      <ul class="socials">
+        <li><a href="mailto:your.email@example.com">Email</a></li>
+        <li><a href="https://github.com/dita-deb" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+        <!-- Add more if applicable -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Anindita Deb</p>
+  </footer>
+
+  <script type="module" src="script.ts"></script>
+</body>
+</html>
