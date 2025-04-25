@@ -1,28 +1,29 @@
-const docSelector = document.getElementById("docSelector") as HTMLSelectElement;
-const docDisplay = document.getElementById("docDisplay") as HTMLDivElement;
+document.addEventListener("DOMContentLoaded", () => {
+  const docSelector = document.getElementById("docSelector") as HTMLSelectElement;
+  const docDisplay = document.getElementById("docDisplay") as HTMLDivElement;
 
-const docs = {
+  const docs = {
     resume: "assets/Anindita_Deb_Resume.pdf",
     certificates: "assets/Certificates.pdf",
     awards: "assets/Awards.pdf"
-  };  
+  };
 
-docSelector.addEventListener("change", () => {
-  const selected = docSelector.value as keyof typeof docs;
-  const src = docs[selected];
+  // Handle document selector change
+  docSelector.addEventListener("change", () => {
+    const selected = docSelector.value as keyof typeof docs;
+    const src = docs[selected];
 
-  docDisplay.innerHTML = src
-    ? `<iframe src="${src}"></iframe>`
-    : "<p>Document not found.</p>";
-});
+    docDisplay.innerHTML = src
+      ? `<iframe src="${src}"></iframe>`
+      : "<p>Document not found.</p>";
+  });
 
-
-interface Project {
+  interface Project {
     title: string;
     description: string;
     link: string;
   }
-  
+
   const projects: Project[] = [
     {
       title: "Seatbelt Safety Detection",
@@ -49,24 +50,23 @@ interface Project {
       description: "Building a generative language model with tokenization and training pipelines.",
       link: "https://github.com/dita-deb/build-a-generative-language-model"
     }
-    // Add more projects as needed
   ];
-  
+
+  // Render projects dynamically
   const projectContainer = document.getElementById("projectContainer");
-  
+
   if (projectContainer) {
     projects.forEach(project => {
       const card = document.createElement("div");
       card.className = "project-card";
-  
+
       card.innerHTML = `
         <h3>${project.title}</h3>
         <p>${project.description}</p>
         <a href="${project.link}" target="_blank">View Project</a>
       `;
-  
+
       projectContainer.appendChild(card);
     });
   }
-
-  
+});
